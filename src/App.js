@@ -8,11 +8,20 @@ class App extends Component {
       {id:2, content: 'play mario kart'}
     ]
   }
+
+  deleteTodo = (id) => {
+    const todos = this.state.todos.filter(todo => {
+      return todo.id !== id
+    });
+    this.setState({
+      todos
+    })
+  }
+
   render(){
     return(
       <div className="App container">
-        <h1 className="blue-text text-center font-weight-bold">Todo's</h1>
-        <Todos todos={this.state.todos} />
+        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
       </div>
     );
   }
