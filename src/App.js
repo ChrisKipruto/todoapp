@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Todos from './components/Todos';
 
 class App extends Component {
   state = {
@@ -9,8 +10,9 @@ class App extends Component {
   }
   render(){
     return(
-      <div className="App">
-      
+      <div className="App container">
+        <h1 className="blue-text text-center font-weight-bold">Todo's</h1>
+        <Todos todos={this.state.todos} />
       </div>
     );
   }
