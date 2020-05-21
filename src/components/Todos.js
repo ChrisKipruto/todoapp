@@ -15,13 +15,11 @@ const Todos = ({todos, deleteTodo}) => {
     )
 
     return (
-        <div className="todos row d-flex justify-content-center px-4 py-4 mt-5">
-            <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12">
-                <h1 className="pink-text text-center font-weight-bold mb-4 text-6xl">Todo's</h1>
-                <ul className="list-group">
-                    {todoList}
-                </ul>
-            </div>
+        <div className="mb-3">
+            <h1 className="pink-text text-center font-weight-bold mb-4 text-6xl">Todo's</h1>
+            <ul className="list-group">
+                {todoList}
+            </ul>
         </div>
     );
 }
